@@ -20,7 +20,7 @@ const jobs = await getCollection('jobs');
 const talks = await getCollection('talks');
 ---
 
-<BaseLayout>
+<BaseLayout seo={entry.data.seo}>
   <section class="py-6">
     <Container>
       <Author {...DEFAULT_CONFIGURATION.author} />
