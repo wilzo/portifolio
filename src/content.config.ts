@@ -1,11 +1,28 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, type ImageFunction } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'zod';
 
+export const seoSchemaWithoutImage = z.object({
+  title: z.string(),
+  description: z.string(),
+  type: z.string().optional(),
+  keywords: z.string().optional(),
+  canonicalUrl: z.string().optional(),
+  twitter: z.object({
+    creator: z.string().optional(),
+  }).optional()
+})
+
+const seoSchema = (image: ImageFunction) =>
+  z.object({
+    image: image().optional(),
+  }).merge(seoSchemaWithoutImage);
+
 const pageCollection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/pages' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
+    seo: seoSchema(image),
   }),
 });
 
@@ -47,6 +64,7 @@ const postCollection = defineCollection({
     title: z.string(),
     date: z.date(),
     image: image(),
+    seo: seoSchema(image),
   }),
 });
 
