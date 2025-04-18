@@ -1,14 +1,58 @@
-# Astro Starter Kit: Minimal
+# CVfolio
+
+**Welcome to CVfolio!**. CVfolio is an minimalistic and aesthetic Astro template for developers and designers to showcase their professional journey, portfolio, and expertise in a modern, fast-loading website.
+
+The source code is still being worked on, so **it's important to share it** with you so we can get feedback and constantly improve it.
+
+Over time, we've managed to add features and improve the design. There are still some things left to do, but the most important thing is that there's an opportunity for this project to be **community-driven**.
+
+- Telegram group: **[Cvfolio »](https://t.me/+5xVGgQ9aQOk1ZmNh)**
+- Follow us on X at **[@coderdiaz »](https://x.com/coderdiaz)**
+- Wish to contribute? Here is how:
+
+## Installation
+
+Cvfolio is built on top of Astro and uses TailwindCSS for generate the website. If you are familiar with Astro, you should feel right at home.
+
+In terms of local development, you can use the following requirements:
+- Node.js - v18.17.1 or v20.3.0, v22.0.0 or higher.
+
+If you have these requirements, you can start by cloning the repository and installing the dependencies:
 
 ```sh
-bun create astro@latest -- --template minimal
+git clone https://github.com/coderdiaz-studio/cvfolio.git
+
+cd cvfolio
+
+git checkout -b feat/your-feature # or fix/your-fix
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+> Don't push directly to the main branch. Instead, create a new branch and push it to your branch.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Next, install the dependencies using Bun or NPM:
+
+```sh
+bun install
+
+# npm
+npm install
+```
+
+Finally, start the development server:
+
+```sh
+bun dev
+```
+
+If everything is OK, push your branch and create a pull request:
+```sh
+git commit -am "Your commit message"
+
+git push
+```
+
+Visit [github.com/coderdiaz-studio/cvfolio/pulls](https://github.com/coderdiaz-studio/cvfolio/pulls) and create a pull request.
+
 
 ## 🚀 Project Structure
 
@@ -23,7 +67,7 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro looks for `.astro` or `.md`, `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
@@ -44,4 +88,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build).
