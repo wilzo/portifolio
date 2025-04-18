@@ -41,9 +41,19 @@ const talkCollection = defineCollection({
   }),
 });
 
+const postCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/posts' }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    date: z.date(),
+    image: image(),
+  }),
+});
+
 export const collections = {
   pages: pageCollection,
   links: linkCollection,
   jobs: jobCollection,
   talks: talkCollection,
+  posts: postCollection,
 };
