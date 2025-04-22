@@ -33,13 +33,17 @@ const { Content } = await render(entry);
           </div>
           <h1 class="text-3xl font-semibold text-headings">{entry.data.title}</h1>
         </div>
-        <div class="relative aspect-video overflow-hidden rounded-lg">
-          <Image
-            src={entry.data.image}
-            alt={entry.data.title}
-            class="object-cover"
-          />
-        </div>
+        {entry.data.image && (
+          <div class="relative aspect-video overflow-hidden rounded-lg">
+            <Image
+              src={entry.data.image?.src}
+              alt={entry.data.title}
+              width={entry.data.image?.width}
+              height={entry.data.image?.height}
+              class="object-cover"
+            />
+          </div>
+        )}
         <div class="prose dark:prose-invert">
           <Content />
         </div>
