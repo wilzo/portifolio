@@ -36,10 +36,8 @@ const { Content } = await render(entry);
         {entry.data.image && (
           <div class="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src={entry.data.image?.src}
+              src={entry.data.image}
               alt={entry.data.title}
-              width={entry.data.image?.width}
-              height={entry.data.image?.height}
               class="object-cover"
             />
           </div>

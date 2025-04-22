@@ -1,11 +1,14 @@
 ---
 import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import { DEFAULT_CONFIGURATION } from '@/lib/constants'
 
 interface Props {
   class?: string;
 }
 const { class: className } = Astro.props;
+
+const image = await getImage({ src: DEFAULT_CONFIGURATION.author.avatar, format: 'avif'});
 ---
 
 <div class:list={[
@@ -14,7 +17,7 @@ const { class: className } = Astro.props;
 ]}>
   <Image
     loading="eager"
-    src={DEFAULT_CONFIGURATION.author.avatar.src}
+    src={image.src}
     alt={DEFAULT_CONFIGURATION.author.name}
     width={52}
     height={52}
