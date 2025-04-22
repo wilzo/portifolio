@@ -1,16 +1,19 @@
 ---
 import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import type { AuthorInfo } from '@/lib/constants';
 
 interface Props extends AuthorInfo {}
 const { avatar, name, headline, username, location, pronouns } = Astro.props;
+
+const image = await getImage({ src: avatar, format: 'avif'});
 ---
 
 <div class="flex items-center gap-4">
   <div class="relative rounded-full shrink-0 overflow-hidden">
     <Image
       loading="eager"
-      src={avatar.src}
+      src={image.src}
       alt={name}
       width={92}
       height={92}
