@@ -10,7 +10,8 @@ export const seoSchemaWithoutImage = z.object({
   canonicalUrl: z.string().optional(),
   twitter: z.object({
     creator: z.string().optional(),
-  }).optional()
+  }).optional(),
+  robots: z.string().optional(),
 })
 
 const seoSchema = (image: ImageFunction) =>

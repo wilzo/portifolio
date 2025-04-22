@@ -44,6 +44,7 @@ export const DEFAULT_CONFIGURATION: DefaultConfigurationType = {
     image: MetaDefaultImage,
     twitter: {
       creator: '@cvfolio'
-    }
+    },
+    robots: 'index, follow',
   }
 };
