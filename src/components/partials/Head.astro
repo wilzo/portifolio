@@ -11,11 +11,12 @@ interface Props {
 const defaultSeo = DEFAULT_CONFIGURATION.seo;
 const { seo } = Astro.props;
 
-const image = await getImage({ src: seo?.image || defaultSeo.image, format: 'png'});
+const image = await getImage({ src: seo?.image || defaultSeo.image, format: 'jpg'});
 const seoImage = generateAbsoluteUrl(image.src);
 ---
 <head>
   <meta charset="utf-8" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   { seo?.canonicalUrl && <link rel="canonical" href={seo?.canonicalUrl} />}
   <title>{seo?.title || defaultSeo.title}</title>
