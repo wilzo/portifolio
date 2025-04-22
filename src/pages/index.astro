@@ -8,11 +8,6 @@ import WorkExperience from '@/components/ui/WorkExperience.astro';
 import Talk from '@/components/ui/Talk.astro';
 
 const entry = await getEntry('pages', 'homepage');
-
-if (!entry) {
-  throw new Error('Homepage content not found in src/content/pages');
-}
-
 const { Content } = await render(entry);
 
 const links = await getCollection('links');
