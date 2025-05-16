@@ -1,10 +1,15 @@
 ---
-const { class: className } = Astro.props;
+interface Props {
+  tag?: keyof Pick<HTMLElementTagNameMap, 'div' | 'section' | 'article' | 'header' | 'footer' | 'code'>;
+  class?: string
+}
+
+const { tag: Tag = 'div', class: className } = Astro.props;
 ---
 
-<div class:list={[
+<Tag class:list={[
   'max-w-[40rem] mx-auto px-4',
   className,
 ]}>
   <slot />
-</div>
+</Tag>
