@@ -24,15 +24,13 @@ export const includeDraft = (draft: boolean) => {
 };
 
 export const sortJobsByDate = (jobs: CollectionEntry<"jobs">[]) => {
-  return jobs.sort((a, b) => {
-    // Handle 'Now' case
-    const aTo = a.data.to === "Now" ? new Date().getFullYear() : a.data.to;
-    const bTo = b.data.to === "Now" ? new Date().getFullYear() : b.data.to;
+  // Convert "Now" to current year, otherwise returns the year as is
+  const getEndYear = (job: CollectionEntry<"jobs">) =>
+    job.data.to === "Now" ? new Date().getFullYear() : job.data.to;
 
-    // Sort by end date first, then by start date
-    if (bTo !== aTo) {
-      return bTo - aTo;
-    }
-    return b.data.from - a.data.from;
+  return jobs.sort((current, next) => {
+    // Compare end years first, then fall back to start years if end years are equal
+    const [currentEnd, nextEnd] = [getEndYear(current), getEndYear(next)];
+    return nextEnd - currentEnd || next.data.from - current.data.from;
   });
 };
