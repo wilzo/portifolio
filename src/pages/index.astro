@@ -18,11 +18,11 @@ const talks = await getCollection('talks');
 ---
 
 <BaseLayout seo={entry.data.seo}>
-  <Container tag='section' class='py-6'>
+  <Container as='section' class='py-6'>
     <Author {...DEFAULT_CONFIGURATION.author} />
   </Container>
 
-  <Container tag='section' class='py-6'>
+  <Container as='section' class='py-6'>
     <div class="flex flex-col gap-6">
       <div class="flex items-center">
         <span class="text-headings">About</span>
@@ -34,7 +34,7 @@ const talks = await getCollection('talks');
   </Container>
   {
     links.length > 0 && (
-      <Container tag='section' class='py-8'>
+      <Container as='section' class='py-8'>
         <div class="flex flex-col gap-5">
           <span class="text-headings">Contact</span>
           <ul class="flex flex-col gap-3">
@@ -62,7 +62,7 @@ const talks = await getCollection('talks');
   }
   {
     sortedJobs.length > 0 && (
-      <Container tag='section' class='py-6'>
+      <Container as='section' class='py-6'>
         <div class="flex flex-col gap-5">
           <span class="text-headings">Work Experience</span>
           <ul class="flex flex-col gap-8">
@@ -76,7 +76,7 @@ const talks = await getCollection('talks');
   }
   {
     talks.length > 0 && (
-      <Container tag='section' class='py-6'>
+      <Container as='section' class='py-6'>
         <div class="flex flex-col gap-5">
           <span class="text-headings">Speaking</span>
           <ul class="flex flex-col gap-8">
