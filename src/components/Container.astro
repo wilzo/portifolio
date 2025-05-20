@@ -1,10 +1,14 @@
 ---
-interface Props {
-  as: keyof Pick<HTMLElementTagNameMap, 'div' | 'section' | 'article' | 'header' | 'footer' | 'code'>;
-  class?: string
-}
+import type { Polymorphic } from 'astro/types';
 
-const { as: Tag, class: className } = Astro.props;
+type LayoutTag = 'section' | 'div' | 'article' | 'header' | 'footer' | 'code';
+
+type Props<Tag extends LayoutTag> = Polymorphic<{
+  as: Tag;
+  class?: string;
+}>;
+
+const { as: Tag = 'div', class: className } = Astro.props as Props<LayoutTag>;
 ---
 
 <Tag class:list={[
