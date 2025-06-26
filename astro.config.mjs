@@ -35,22 +35,27 @@ export default defineConfig({
         variants: [
           {
             src: ['./src/assets/fonts/Inter-Regular.woff2'],
+            style: 'normal',
             weight: 400,
           },
           {
             src: ['./src/assets/fonts/Inter-Medium.woff2'],
+            style: 'normal',
             weight: 500,
           },
           {
             src: ['./src/assets/fonts/Inter-SemiBold.woff2'],
+            style: 'normal',
             weight: 600,
           },
           {
             src: ['./src/assets/fonts/Inter-Bold.woff2'],
+            style: 'normal',
             weight: 700,
           },
           {
             src: ['./src/assets/fonts/Inter-ExtraBold.woff2'],
+            style: 'normal',
             weight: 800,
           },
         ],
@@ -59,7 +64,13 @@ export default defineConfig({
         name: 'InterVariable',
         cssVariable: '--font-inter-variable',
         provider: 'local',
-        variants: [{ src: ['./src/assets/fonts/InterVariable.woff2'] }],
+        variants: [
+          {
+            src: ['./src/assets/fonts/InterVariable.woff2'],
+            style: 'normal',
+            weight: 400,
+          },
+        ],
       },
     ],
   },
