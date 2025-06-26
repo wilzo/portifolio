@@ -68,7 +68,7 @@ export default defineConfig({
           {
             src: ['./src/assets/fonts/InterVariable.woff2'],
             style: 'normal',
-            weight: 400,
+            weight: 'variable',
           },
         ],
       },
