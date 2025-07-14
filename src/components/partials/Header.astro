@@ -4,7 +4,7 @@ import Container from '@/components/Container.astro';
 const pathname = Astro.url.pathname;
 
 const isHomePage = pathname === '/';
-const isWritingPage = pathname.startsWith('/writing');
+const iswritingPage = pathname.startsWith('/writing');
 
 ---
 
@@ -23,8 +23,8 @@ const isWritingPage = pathname.startsWith('/writing');
           <a href="/writing" class:list={[
             'font-medium transition-colors block px-5 py-2',
             'hover:text-headings',
-            isWritingPage && 'text-headings bg-muted-foreground/40 rounded-full',
-          ]}>Writing</a>
+            iswritingPage && 'text-headings bg-muted-foreground/40 rounded-full',
+          ]}> Blog</a>
         </li>
       </ul>
     </nav>

@@ -1,18 +1,45 @@
 ---
-title: Example Post
-date: 2021-01-01
+title: Desafio Técnico — Listagem de Perfis com API
+date: 2025-07-11
 image: ./meta.jpg
 seo:
-  title: Example Post with Code
-  description: Demo example for write posts
+  title: Desafio Técnico — Listagem de Perfis com API
+  description: Como resolvi um desafio técnico que consistia em listar perfis usando requisições, estado e renderização no React.
   type: article
-  keywords: blog code, example shiki
+  keywords: desafio técnico, React, consumo de API, frontend, listagem
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Recentemente participei de um **desafio técnico** com o objetivo de desenvolver uma interface que listasse perfis de usuários consumindo dados de uma **API LOCAL PRÓPRIA**. Foi uma ótima oportunidade de colocar em prática meus conhecimentos com **React**, **Node**, e manipulação de estado.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## 🚀 O desafio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+O objetivo era simples, mas exigia atenção aos detalhes:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- Criar uma api local usando Mysql
+- Buscar dados dessa API
+- Exibir uma lista de perfis com nome, imagem e dados sobre o endereço.
+- Aplicar responsividade e organização visual.
+
+## ⚙️ Tecnologias utilizadas
+
+- **React**
+- **Node**
+- **Axios**
+- **CSS Modules**
+- **Tailwind CSS**
+
+## 🧠 O que aprendi
+
+- A importância de **tratar erros de API** corretamente.
+- Usar `map()` com chaves únicas para renderizar listas sem warnings.
+- Separar componentes como `UserCard` para manter o código limpo.
+- Criar loaders e estados condicionais (`isLoading`, `error`, `data`).
+- Usar props para passar dados entre componentes de forma eficiente.
+
+## 📸 Resultado
+
+A aplicação final apresenta os perfis em cards organizados com imagem, nome e e-mail. Também implementei uma lógica de loading e fallback de erro para mostrar mensagens ao usuário caso algo falhe.
+
+---
+
+Esse desafio me ajudou a reforçar boas práticas no React e melhorou minha habilidade de trabalhar com APIs e estado global de forma clara e objetiva.
